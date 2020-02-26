@@ -42,8 +42,7 @@ stages:
         KeyVaultName: 'TenableCSDemoKeyVaultJF'
         SecretsFilter: '*'
     - task: ShellScript@2
-    displayName: Assessing image for vulns
-    inputs:
-      scriptPath: tiocs-azure-on-prem-scanner.sh
-      args: '$(TIOACCESSKEY) $(TIOSECRETKEY) $(TENABLEIOJFROG)'
-      
+      displayName: Assessing image for vulns
+      inputs:
+        scriptPath: tiocs-azure-on-prem-scanner.sh
+        args: '$(TIOACCESSKEY) $(TIOSECRETKEY) $(TENABLEIOJFROG)'
